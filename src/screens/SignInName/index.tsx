@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Image, Text, TextInput, View } from "react-native";
 import { styles } from './style'
 
-export function SignIn(){
+export function SignInName(){
 
 	const [ name, setName ] = useState('');
 

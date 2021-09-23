@@ -1,8 +1,10 @@
 import React from 'react';
-import { SignIn } from './src/screens/SignIn';
+import { StatusBar, View } from 'react-native';
+import { SignInName } from './src/screens/SignInName';
+import { SignInCity } from './src/screens/SignInCity';
 
 export default function App() {
   return (
-    <SignIn/>
+      <SignInCity/>
   )
 }
