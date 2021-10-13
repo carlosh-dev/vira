@@ -1,20 +1,19 @@
-import React, { useState } from "react";
-import { Text, View, StatusBar, Image } from "react-native";
+import React from "react";
+import { Text, View, Image } from "react-native";
 import { LEDPatternButton } from "../../components/LEDPatternsButton";
 import { styles } from './style'
 import BikeIllustration from '../../assets/BikeIllustration.png'
+import { Profile } from "../../components/Profile";
 
 
 export function Home(){
-	
-	const name = "Carlos"
 
 	const matrixRight = [
 					[0,0,1,0,0,1,0,0],
 					[0,0,1,0,0,1,0,0],
 					[0,0,1,0,0,1,0,0],
 					[0,0,1,0,0,1,0,0],
-					[1,0,0,0,0,0,0,1],
+					[1,0,1,0,0,1,0,1],
 					[1,0,0,0,0,0,0,1],
 					[0,1,1,1,1,1,1,0],
 					[0,0,1,1,1,1,0,0],
@@ -25,29 +24,19 @@ export function Home(){
 					[1,1,1,1,1,1,1,1],
 					[1,1,1,1,1,1,1,1],
 					[1,1,1,1,1,1,1,1],
+					[1,1,1,1,1,1,1,1],
 					[0,1,1,1,1,1,1,0],
 					[0,0,1,1,1,1,0,0],
 					[0,0,0,1,1,0,0,0],
-					[0,0,0,0,0,0,0,0],
 				];
 	
 	return (
 		<View style={styles.container}>
-			<StatusBar
-				barStyle="light-content"
-				backgroundColor="transparent"
-				translucent
-			 />
-
 			<View style={styles.header}>
-				<View style={styles.containerHello}>
-					<Text style={styles.textHello}>Olá,</Text>
-					<Text style={styles.textName}>
-						{name}!
-					</Text>
-				</View>
+				<Profile/>
 
-				<View>			
+				<View>		
+					
 				</View>
 			</View>
 			<View style={styles.content}>
@@ -58,8 +47,14 @@ export function Home(){
 
 					<Text style={styles.subtitle}>
 						Esses são os padrões {`\n`}
-						atuais do seu dispositivo
+						atuais do seu dispositivo {`\n`}
+						<Text style={styles.subtitleBold}>
+							Toque para alterá-los.
+						</Text>
 					</Text>
+
+					
+					
 				</View>
 
 				<View style={styles.patterns}>

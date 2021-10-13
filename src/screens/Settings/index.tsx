@@ -3,7 +3,7 @@ import { Text, View, StatusBar } from "react-native";
 import { styles } from './style'
 
 
-export function Config(){
+export function Settings(){
 	
 	return (
 		<View style={styles.container}>

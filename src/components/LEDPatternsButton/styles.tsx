@@ -5,7 +5,6 @@ export const styles = StyleSheet.create({
     container: {
         height: 140,
         width: 140,      
-        backgroundColor: theme.colors.primary,
         borderRadius: 20,
         padding: 10,
     },
@@ -28,14 +27,14 @@ export const styles = StyleSheet.create({
         height: 9,
         width: 9,
         borderRadius: 99,
-        backgroundColor: theme.colors.detail
+        backgroundColor: theme.colors.detail,
     },
 
     offLED: {
         height: 9,
         width: 9,
         borderRadius: 99,
-        backgroundColor: theme.colors.offLED
+        backgroundColor: theme.colors.offLED,
     },
     
 })

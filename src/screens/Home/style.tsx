@@ -4,11 +4,10 @@ import { theme } from "../../global/styles/theme";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: theme.colors.background,
     },
 
     header: {
-        flex: 1.5,
+        flex: 1,
         flexDirection: 'row',
         backgroundColor: theme.colors.primary,
         justifyContent: 'space-between',
@@ -18,27 +17,8 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 20,
     },
 
-    containerHello: {
-        
-    },
-    
-    textHello: {
-        display: 'flex',
-        flexDirection: 'column',
-        color: '#fff',
-        fontSize: 30,
-        fontFamily: theme.fonts.textRegular,
-    },
-
-    textName: {
-        color: '#fff',
-        fontSize: 40,
-        fontFamily: theme.fonts.textBold,
-    },
-
     content: {
         flex: 7,
-        backgroundColor: "#100F22",
         paddingRight: 20,
         paddingLeft: 20,
         paddingTop: 10,
@@ -65,6 +45,14 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         marginBottom: 10,
         fontFamily: theme.fonts.textRegular,
+    },
+
+    subtitleBold: {
+        fontSize: 20,
+        color: '#fff',
+        textAlign: 'center',
+        marginBottom: 10,
+        fontFamily: theme.fonts.textBold,
     },
 
     patterns: {

@@ -2,9 +2,17 @@ import React, { useState } from "react";
 import { Text, View, StatusBar } from "react-native";
 import { styles } from './style'
 import {Picker} from '@react-native-picker/picker';
+import { Button } from "../../components/Button";
+import { useNavigation } from "@react-navigation/core";
 
 
-export function SignInCity(){
+export function CityScreen(){
+
+	const navigation:any = useNavigation();
+
+	function handleNavigation(){
+		navigation.navigate('CityScreen');
+	};
 
 	const [selectedCity, setSelectedCity] = useState('São Paulo');
 
@@ -32,13 +40,14 @@ export function SignInCity(){
 					animated={true}
 					backgroundColor="#130C37"
 					barStyle={'light-content'}
-					 />
+				/>
+
 				<Text style={styles.text}>
 					<Text style={{ fontWeight: 'bold' }}>Legal, Carlos!</Text>{"\n"}
 					E onde você mora?
 				</Text>
 
-				<View style={{borderRadius: 20, borderWidth: 1, borderColor: '#bdc3c7', overflow: 'hidden'}}>
+				<View style={styles.picker}>
 					<Picker
 						selectedValue={selectedCity}
 						style={styles.input}
@@ -49,7 +58,11 @@ export function SignInCity(){
 						
 					</Picker>
 				</View>
-				
+
+				<Button
+					title='Continuar'
+					onPress={handleNavigation}
+				/>
 		</View>
 	)
 }

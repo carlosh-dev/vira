@@ -1,6 +1,8 @@
 import React from 'react';
-import { View, TouchableOpacity, Text } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import { styles } from '../../components/LEDPatternsButton/styles';
+import { LinearGradient } from 'expo-linear-gradient';
+import { theme } from '../../global/styles/theme';
 
 interface Props {
     matrix: any,
@@ -20,12 +22,18 @@ export function LEDPatternButton({
             )}
         </View>
     );
+    const { buttonGradientUp, buttonGradientDown } = theme.colors;
 
     return(
-        <TouchableOpacity activeOpacity={0.7} style={styles.container}>
-            <View style={styles.column}>
-                {dots}
-            </View>
+        <TouchableOpacity activeOpacity={0.7}>
+            <LinearGradient 
+                style={styles.container}
+                colors={[ buttonGradientUp, buttonGradientDown ]}
+                start={{ x: 0.2, y: 0.5 }} >
+                <View style={styles.column}>
+                    {dots}
+                </View>
+            </LinearGradient>
         </TouchableOpacity>
 
 )};
