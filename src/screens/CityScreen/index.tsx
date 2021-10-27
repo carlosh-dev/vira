@@ -11,7 +11,7 @@ export function CityScreen(){
 	const navigation:any = useNavigation();
 
 	function handleNavigation(){
-		navigation.navigate('CityScreen');
+		navigation.navigate('Home');
 	};
 
 	const [selectedCity, setSelectedCity] = useState('São Paulo');
@@ -53,9 +53,7 @@ export function CityScreen(){
 						style={styles.input}
 						onValueChange={(itemValue, itemIndex) => setSelectedCity(itemValue)}
 					>
-						
 						{citiesPickeroptions}
-						
 					</Picker>
 				</View>
 

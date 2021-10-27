@@ -1,26 +1,39 @@
 import { useNavigation } from "@react-navigation/core";
 import React, { useState } from "react";
-import { SafeAreaView, Text, TextInput, View } from "react-native";
+import { Alert, SafeAreaView, Text, TextInput, View } from "react-native";
 import { Button } from "../../components/Button";
 import { theme } from "../../global/styles/theme";
 import { styles } from './style'
 
-export function UserName(){
+export function UserNameScreen(){
+	
+	const [isFocused, setIsFocused] = useState(false);
+	const [isFilled, setIsFilled] = useState(false);
+	const [userName, setUserName] = useState<string>();
 
 	const navigation:any = useNavigation();
 
 	function handleNavigation(){
+		if(!isFilled){
+			Alert.alert("Preencha com um nome, por favor.");
+			return
+		}
 		navigation.navigate('CityScreen');
 	};
 
-	const [isFocused, setIsFocused] = useState(false);
-
 	function handleInputBlur(){
-		setIsFocused(false)
+		setIsFocused(false);
+		setIsFilled(!!userName);
 	};
 
 	function handleInputFocus(){
-		setIsFocused(true)
+		setIsFocused(true);
+	};
+
+	function handleInputChange(value: string){
+		setIsFocused(!!value);
+		setIsFilled(!!value)
+		setUserName(value);
 	};
 
 	return (
@@ -29,7 +42,7 @@ export function UserName(){
 				
 				<View style={styles.form}>
 					<Text style={styles.emoji}>
-						😊
+						{(isFocused || isFilled) ? '😀' : '😊' }
 					</Text>
 
 					<Text style={styles.text}>
@@ -40,11 +53,13 @@ export function UserName(){
 					<TextInput 
 						style={[
 							styles.input,
-							isFocused && {borderColor: theme.colors.primary}
+							(isFocused || isFilled) && 
+							{borderColor: theme.colors.primary}
 						]}
 						placeholder="Digite um nome"
 						onBlur={handleInputBlur}
 						onFocus={handleInputFocus}
+						onChangeText={(value) => handleInputChange(value)}
 					/>
 
 					<Button  

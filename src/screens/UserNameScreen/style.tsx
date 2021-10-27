@@ -31,17 +31,16 @@ export const styles = StyleSheet.create({
         fontSize: 20,
         color: theme.colors.white,
         textAlign: 'center',
-        marginBottom: 20,
     },
 
     input: {
         borderRadius: 99,
+        borderBottomWidth: 3,
         width: '100%',
         height: 40,
         textAlign: 'center',
         fontSize: 20,
         backgroundColor: theme.colors.white,
-        marginBottom: 30,
     }
 
 

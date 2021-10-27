@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View, Image } from "react-native";
 import { LEDPatternButton } from "../../components/LEDPatternsButton";
 import { styles } from './style'
-import BikeIllustration from '../../assets/BikeIllustration.png'
+import BikeIllustration from '../../assets/images/BikeIllustration.png'
 import { Profile } from "../../components/Profile";
 
 
@@ -13,7 +13,7 @@ export function Home(){
 					[0,0,1,0,0,1,0,0],
 					[0,0,1,0,0,1,0,0],
 					[0,0,1,0,0,1,0,0],
-					[1,0,1,0,0,1,0,1],
+					[1,0,0,0,0,0,0,1],
 					[1,0,0,0,0,0,0,1],
 					[0,1,1,1,1,1,1,0],
 					[0,0,1,1,1,1,0,0],

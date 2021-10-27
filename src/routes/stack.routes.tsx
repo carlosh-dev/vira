@@ -1,8 +1,9 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { Welcome } from '../screens/Welcome';
-import { UserName } from '../screens/UserName';
+import { UserNameScreen } from '../screens/UserNameScreen';
 import { CityScreen } from '../screens/CityScreen';
+import { Home } from '../screens/Home';
 
 const stackRoutes = createNativeStackNavigator();
 
@@ -21,13 +22,18 @@ const AppRoutes: React.FC = () => (
         />
 
         <stackRoutes.Screen 
-            name="UserName"
-            component={UserName}
+            name="UserNameScreen"
+            component={UserNameScreen}
         />
 
         <stackRoutes.Screen 
             name="CityScreen"
-            component={CityScreen}
+            component={CityScreen} 
+        />
+
+        <stackRoutes.Screen 
+            name="Home"
+            component={Home} 
         />
 
     </stackRoutes.Navigator>

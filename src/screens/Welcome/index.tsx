@@ -3,14 +3,14 @@ import { Text, Image, SafeAreaView } from "react-native";
 import IllustrationVIRA from '../../assets/images/IllustrationVIRA.png'
 import { Button } from "../../components/Button";
 import { styles } from './style'
-import { RouteProp, useNavigation } from "@react-navigation/core";
+import { useNavigation } from "@react-navigation/core";
 
 export function Welcome(){
 
 	const navigation:any = useNavigation();
 
 	function handleNavigation(){
-		navigation.navigate('UserName');
+		navigation.navigate('UserNameScreen');
 	};
 
 	return (

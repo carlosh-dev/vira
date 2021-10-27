@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         height: 30,
         paddingHorizontal: 10,
+        marginTop: 30,
     },
     
     title: {

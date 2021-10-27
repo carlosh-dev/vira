@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
         borderWidth: 1, 
         borderColor: '#bdc3c7', 
         overflow: 'hidden', 
-        backgroundColor: "#FFF"
+        backgroundColor: "#FFF",
     },
         
     input: {
