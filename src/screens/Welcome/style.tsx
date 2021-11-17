@@ -6,34 +6,39 @@ export const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'space-around',
         alignItems: 'center',
-        paddingTop: 100,
+        paddingTop: 50,
         paddingBottom: 20,
     },
 
-    image: {
-        width: Dimensions.get('window').width * 0.7,
-        height: 300,
-    },
-
     title: {
-        fontSize: 30,
+        fontSize: 25,
         color: '#fff',
         textAlign: 'center',
+        width: '100%',
         fontFamily: theme.fonts.textBold,
     },
 
+    animation: {
+        backgroundColor: 'transparent',
+        height: 450,        
+        marginTop: -50,
+    },
+    
     subtitle: {
         fontSize: 17,
         color: '#fff',
         textAlign: 'center',
         fontFamily: theme.fonts.textRegular,
+        marginTop: -100,
+        width: '100%',
+        paddingHorizontal: 20,
     },
 
     button: {
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: theme.colors.primary,
-        width: 50,
+        width: '90%',
         height: 50,
         borderRadius: 99,
     },
@@ -42,7 +47,9 @@ export const styles = StyleSheet.create({
         color: '#fff',
         fontFamily: theme.fonts.textBold,
         fontSize: 30,
-    }
+    },
+
+    
 
 
 

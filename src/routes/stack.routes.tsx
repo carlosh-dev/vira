@@ -4,6 +4,8 @@ import { Welcome } from '../screens/Welcome';
 import { UserNameScreen } from '../screens/UserNameScreen';
 import { CityScreen } from '../screens/CityScreen';
 import { Home } from '../screens/Home';
+import { NewPattern } from '../screens/NewPattern';
+import AuthRoutes from './tab.routes';
 
 const stackRoutes = createNativeStackNavigator();
 
@@ -16,6 +18,7 @@ const AppRoutes: React.FC = () => (
             }
         }}
     >
+
         <stackRoutes.Screen 
             name="Welcome"
             component={Welcome}
@@ -33,9 +36,17 @@ const AppRoutes: React.FC = () => (
 
         <stackRoutes.Screen 
             name="Home"
-            component={Home} 
-        />
+            component={AuthRoutes} 
+        />        
 
+        <stackRoutes.Screen 
+            name="NewPattern"
+            component={NewPattern} 
+        />    
+
+         
+
+        
     </stackRoutes.Navigator>
 );
 

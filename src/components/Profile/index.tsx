@@ -3,11 +3,15 @@ import { Text, View } from 'react-native';
 import { styles } from './styles';
 import {Avatar} from '../Avatar'
 
-export function Profile() {
+interface Props {
+    name: string
+}
+
+export function Profile({ name }: Props) {
     return(
         <View style={styles.container}>
             
-            <Avatar urlImage="https://github.com/carlosh-dev.png"/>
+            {/* <Avatar urlImage="https://github.com/carlosh-dev.png"/> */}
 
             <View>
                 <Text style={styles.greetings}>
@@ -16,7 +20,7 @@ export function Profile() {
 
 
                 <Text style={styles.userName}>
-                    Carlos
+                    { name }
                 </Text>
             </View>
         </View>

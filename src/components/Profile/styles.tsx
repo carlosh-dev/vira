@@ -4,14 +4,14 @@ import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
     container: {
+        flex: 1,
         flexDirection: "row",
         alignItems: 'center',
-        justifyContent: 'center'
     },
 
     greetings: {
         color: '#fff',
-        fontSize: 20,
+        fontSize: 30,
         fontFamily: theme.fonts.textRegular,
         marginTop: 10,
         marginBottom: -10,
@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
 
     userName: {
         color: '#fff',
-        fontSize: 30,
+        fontSize: 40,
         fontFamily: theme.fonts.textBold,
     },
 

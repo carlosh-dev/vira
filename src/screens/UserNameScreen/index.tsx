@@ -1,3 +1,4 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/core";
 import React, { useState } from "react";
 import { Alert, SafeAreaView, Text, TextInput, View } from "react-native";
@@ -13,12 +14,15 @@ export function UserNameScreen(){
 
 	const navigation:any = useNavigation();
 
-	function handleNavigation(){
-		if(!isFilled){
+	async function handleNavigation(){
+		if(!userName){
 			Alert.alert("Preencha com um nome, por favor.");
 			return
 		}
-		navigation.navigate('CityScreen');
+
+		await AsyncStorage.setItem('@vira:user', userName);
+
+		navigation.navigate('Home');
 	};
 
 	function handleInputBlur(){
