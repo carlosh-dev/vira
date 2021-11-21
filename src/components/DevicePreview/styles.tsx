@@ -54,7 +54,7 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         color: '#fff',
         justifyContent: 'space-between',
-        alignContent: 'space-between',
+        alignItems: 'center',
     },
 
     dotLED: {

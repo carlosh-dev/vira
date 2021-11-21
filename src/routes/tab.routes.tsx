@@ -20,13 +20,13 @@ const AuthRoutes = () => {
                 tabBarInactiveBackgroundColor: theme.colors.primary,
                 tabBarStyle: {
                     borderTopColor: 'transparent',
-                    borderRadius: 20
+                    borderRadius: 20,
                 }
             }}
             
         >
         <AppTab.Screen
-            name={'Home'}
+            name={'Início'}
             component={Home}
             options={{
                 tabBarIcon: (({size, color}) => (

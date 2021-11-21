@@ -3,217 +3,45 @@ import { useNavigation } from "@react-navigation/core";
 import React, { useEffect, useState } from "react";
 import { FlatList, Text, TouchableOpacity, View } from "react-native";
 import { GradientBackground } from "../../components/GradientBackground";
-import { Head } from "../../components/Head";
 import { PatternCard } from "../../components/PatternCard";
 import { theme } from "../../global/styles/theme";
 import { loadPattern, PatternLEDProps } from "../../libs/storage";
 
 import { styles } from './style'
 
-export function MyPatterns(){
+
+
+export function MyPatterns({ navigation }:any){
 
 	const [ myPatterns, setMyPatterns ] = useState<PatternLEDProps[]>([])
-	const [ loading, setLoading] = useState(true);
+	const [ fetching, setFetching] = useState(false);
+
 
 	useEffect(()=>{
+		const unsubscribe = navigation.addListener('focus', () => {
+			handleRefresh();
+		});
+		
+		return unsubscribe;	
+	},[navigation]);
+
+	function  handleRefresh(){
+		setFetching(true);
 		async function loadData() {
 			const patternsStoraged = await loadPattern();
 
-			// setMyPatterns(patternsStoraged)
+			setMyPatterns(patternsStoraged)
 		}	
-
 		loadData();
-	},[]);
+		setFetching(false);		
+	}
+	
 
-	const testeJSON = [ 
-		{
-			id: '1',
-			name: "Coração",
-			matrix: [
-				[0, 1, 1, 0, 0, 1, 1, 0],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[0, 1, 1, 1, 1, 1, 1, 0],
-				[0, 0, 1, 1, 1, 1, 0, 0],
-				[0, 0, 0, 1, 1, 0, 0, 0],
-			],
-		},
+	function handleAdd(){
+		navigation.navigate('NewPattern');
+	}
 
-		{
-			id: '2',
-			name: "Coração",
-			matrix: [
-				[0, 1, 1, 0, 0, 1, 1, 0],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[0, 1, 1, 1, 1, 1, 1, 0],
-				[0, 0, 1, 1, 1, 1, 0, 0],
-				[0, 0, 0, 1, 1, 0, 0, 0],
-			],
-		},
-
-		{
-			id: '3',
-			name: "Coração",
-			matrix: [
-				[0, 1, 1, 0, 0, 1, 1, 0],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[0, 1, 1, 1, 1, 1, 1, 0],
-				[0, 0, 1, 1, 1, 1, 0, 0],
-				[0, 0, 0, 1, 1, 0, 0, 0],
-			],
-		},
-		{
-			id: '4',
-			name: "Coração",
-			matrix: [
-				[0, 1, 1, 0, 0, 1, 1, 0],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[0, 1, 1, 1, 1, 1, 1, 0],
-				[0, 0, 1, 1, 1, 1, 0, 0],
-				[0, 0, 0, 1, 1, 0, 0, 0],
-			],
-		},
-		{
-			id: '5',
-			name: "Coração",
-			matrix: [
-				[0, 1, 1, 0, 0, 1, 1, 0],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[0, 1, 1, 1, 1, 1, 1, 0],
-				[0, 0, 1, 1, 1, 1, 0, 0],
-				[0, 0, 0, 1, 1, 0, 0, 0],
-			],
-		},
-		{
-			id: '6',
-			name: "Coração",
-			matrix: [
-				[0, 1, 1, 0, 0, 1, 1, 0],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[0, 1, 1, 1, 1, 1, 1, 0],
-				[0, 0, 1, 1, 1, 1, 0, 0],
-				[0, 0, 0, 1, 1, 0, 0, 0],
-			],
-		},
-		{
-			id: '7',
-			name: "Coração",
-			matrix: [
-				[0, 1, 1, 0, 0, 1, 1, 0],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[0, 1, 1, 1, 1, 1, 1, 0],
-				[0, 0, 1, 1, 1, 1, 0, 0],
-				[0, 0, 0, 1, 1, 0, 0, 0],
-			],
-		},
-		{
-			id: '8',
-			name: "Coração",
-			matrix: [
-				[0, 1, 1, 0, 0, 1, 1, 0],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[0, 1, 1, 1, 1, 1, 1, 0],
-				[0, 0, 1, 1, 1, 1, 0, 0],
-				[0, 0, 0, 1, 1, 0, 0, 0],
-			],
-		},
-		{
-			id: '9',
-			name: "Coração",
-			matrix: [
-				[0, 1, 1, 0, 0, 1, 1, 0],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[0, 1, 1, 1, 1, 1, 1, 0],
-				[0, 0, 1, 1, 1, 1, 0, 0],
-				[0, 0, 0, 1, 1, 0, 0, 0],
-			],
-		},
-		{
-			id: '10',
-			name: "Coração",
-			matrix: [
-				[0, 1, 1, 0, 0, 1, 1, 0],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[0, 1, 1, 1, 1, 1, 1, 0],
-				[0, 0, 1, 1, 1, 1, 0, 0],
-				[0, 0, 0, 1, 1, 0, 0, 0],
-			],
-		},
-		{
-			id: '11',
-			name: "Coração",
-			matrix: [
-				[0, 1, 1, 0, 0, 1, 1, 0],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[0, 1, 1, 1, 1, 1, 1, 0],
-				[0, 0, 1, 1, 1, 1, 0, 0],
-				[0, 0, 0, 1, 1, 0, 0, 0],
-			],
-		},
-		{
-			id: '12',
-			name: "Coração",
-			matrix: [
-				[0, 1, 1, 0, 0, 1, 1, 0],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[0, 1, 1, 1, 1, 1, 1, 0],
-				[0, 0, 1, 1, 1, 1, 0, 0],
-				[0, 0, 0, 1, 1, 0, 0, 0],
-			],
-		},
-		{
-			id: '13',
-			name: "Coração",
-			matrix: [
-				[0, 1, 1, 0, 0, 1, 1, 0],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[1, 1, 1, 1, 1, 1, 1, 1],
-				[0, 1, 1, 1, 1, 1, 1, 0],
-				[0, 0, 1, 1, 1, 1, 0, 0],
-				[0, 0, 0, 1, 1, 0, 0, 0],
-			],
-		},
-
-
-	]
-
+	
 	return (
 		<View style={styles.container}>	
 			<GradientBackground>
@@ -225,7 +53,7 @@ export function MyPatterns(){
 						<TouchableOpacity 
 							style={styles.addButton} 
 							activeOpacity={0.8}
-							onPress={()=>{}}
+							onPress={handleAdd}
 						>
 							<MaterialIcons
 								name={'add'}
@@ -236,7 +64,7 @@ export function MyPatterns(){
 					</View>
 					
 					<FlatList
-						data={testeJSON}
+						data={myPatterns}
 						numColumns={2}
 						renderItem={({ item }) => (
 						<PatternCard
@@ -247,6 +75,8 @@ export function MyPatterns(){
 						keyExtractor={(item) => item.id}
 						showsVerticalScrollIndicator={false}
 						style={styles.flatList}
+						refreshing={fetching}
+						onRefresh={handleRefresh}
 					/>
 
 

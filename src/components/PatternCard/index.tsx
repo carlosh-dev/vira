@@ -3,6 +3,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { theme } from '../../global/styles/theme';
 import { styles } from './styles';
+import FadeLogo from '../../assets/images/FadeLogo.png'
 
 interface Props{
     name: string,
@@ -37,6 +38,7 @@ export function PatternCard({name, matrix}:Props) {
             </View>
 
             <Text style={styles.title}>{name}</Text>
+            
         </LinearGradient>
         
     )

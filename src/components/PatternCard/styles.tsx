@@ -4,18 +4,17 @@ import { theme } from "../../global/styles/theme";
 export const styles = StyleSheet.create({
     container: {
         
-        width: '45%',
-        height: 150,
+        width: '100%',
         borderRadius: 15,
         padding: 10,
+        marginVertical: 10,
         alignItems: 'center',
-        justifyContent: 'space-around',
-        margin: 10
+        flexDirection: 'row'
     },
     
     patterns: {
-        height: 100,
-        width: 100,      
+        height: 90,
+        width: 90,      
         borderRadius: 7,
         padding: 5,
         backgroundColor: theme.colors.secondary,
@@ -35,12 +34,12 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         color: '#fff',
         justifyContent: 'space-between',
-        alignContent: 'space-between',
+        alignItems: 'center',
     },
 
     dotLED: {
-        height: 9,
-        width: 9,
+        height: 7,
+        width: 7,
         borderRadius: 99,
     },
 
@@ -53,9 +52,10 @@ export const styles = StyleSheet.create({
     },
 
     title: {
-        fontSize: 20,
+        fontSize: 40,
         fontFamily: theme.fonts.textMedium,
         color: theme.colors.white,
-
+        marginLeft: 10,
+        alignSelf: "flex-start"
     },
 });

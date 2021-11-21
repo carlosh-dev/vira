@@ -34,12 +34,23 @@ export async function savePattern(pattern: PatternLEDProps): Promise<void> {
     }
 }
 
-export async function loadPattern(): Promise<StoragePatternLED> {
+export async function loadPattern(): Promise<any> {
     try{
         const data =  await AsyncStorage.getItem('@vira:patternsLED');
         const patterns = data ? (JSON.parse(data) as StoragePatternLED) : {}
 
-       return patterns;
+        const formattedPatterns = Object
+        .keys(patterns)
+        .map((pattern) => {
+            return {
+                ...patterns[pattern].data
+            }
+        })
+
+        console.log(formattedPatterns);
+        
+
+       return formattedPatterns;
     }catch(error:any){
         throw new Error(error);
     }
