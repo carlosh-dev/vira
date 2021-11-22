@@ -31,7 +31,6 @@ export const styles = StyleSheet.create({
     },
 
     solarPanel: {
-        backgroundColor: '#141414',
         width: '100%',
         height: '100%',
         borderRadius: 5,
@@ -75,8 +74,12 @@ export const styles = StyleSheet.create({
     },
 
     iconView: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 60,
+        height: 60,
         borderRadius: 50,
-        backgroundColor: theme.colors.primary,
+        backgroundColor: theme.colors.secondary,
     }
     
 })

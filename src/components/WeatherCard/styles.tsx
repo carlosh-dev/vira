@@ -9,7 +9,6 @@ export const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: 10,
-        
     },
 
     iconCircle: {
@@ -34,23 +33,36 @@ export const styles = StyleSheet.create({
         fontSize: 20,
         color: theme.colors.white,
         marginBottom: -7
-        
+    },
+
+    subtitle: {
+        fontFamily: theme.fonts.textMedium,
+        fontSize: 12,
+        color: theme.colors.white,
     },
 
     text: {
         fontFamily: theme.fonts.textMedium,
-        fontSize: 50,
+        fontSize: 60,
         color: theme.colors.white,
     },
 
     celsius: {
         fontFamily: theme.fonts.textMedium,
-        fontSize: 25,
+        fontSize: 30,
         color: theme.colors.white,
+        marginRight: 15,
+    },
+
+    minMax: {
+        fontFamily: theme.fonts.textMedium,
+        fontSize: 12,
+        color: theme.colors.white,
+        marginTop: -20
     },
 
     weather: {
-        
+        flexDirection: 'row',
     },
 
     image: {
@@ -61,7 +73,7 @@ export const styles = StyleSheet.create({
     imageBackground: {
         alignItems: 'center',
         width: '100%',
-        height: 100,
+        
         marginVertical: 10,
     },
 

@@ -57,7 +57,7 @@ export function DevicePreview({
             <TouchableOpacity style={ styles.solarPanelContainer} activeOpacity={0.9} onPress={handleSync}>
                 <View style={ styles.solarPanel}>
                     <View style={styles.iconView}>
-                        <MaterialIcons name={'sync'} size={30} color={'#fff'}/>
+                        <MaterialIcons name={'sync'} size={60} color={'#fff'}/>
                     </View>
                 </View>
             </TouchableOpacity>
