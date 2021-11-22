@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { styles } from './styles';
 import {Avatar} from '../Avatar'
+import DefaultAvatar from '../../assets/images/default-avatar.png'
 
 interface Props {
     name: string
@@ -11,7 +12,7 @@ export function Profile({ name }: Props) {
     return(
         <View style={styles.container}>
             
-            {/* <Avatar urlImage="https://github.com/carlosh-dev.png"/> */}
+            <Avatar />
 
             <View>
                 <Text style={styles.greetings}>

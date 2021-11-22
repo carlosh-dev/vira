@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         paddingTop: 50,
         paddingBottom: 20,
+        paddingHorizontal: 20,
     },
 
     title: {
@@ -15,6 +16,10 @@ export const styles = StyleSheet.create({
         color: '#fff',
         textAlign: 'center',
         width: '100%',
+        fontFamily: theme.fonts.textBold,
+    },
+    
+    bold: {
         fontFamily: theme.fonts.textBold,
     },
 
@@ -29,9 +34,7 @@ export const styles = StyleSheet.create({
         color: '#fff',
         textAlign: 'center',
         fontFamily: theme.fonts.textRegular,
-        marginTop: -100,
         width: '100%',
-        paddingHorizontal: 20,
     },
 
     button: {
@@ -48,6 +51,12 @@ export const styles = StyleSheet.create({
         fontFamily: theme.fonts.textBold,
         fontSize: 30,
     },
+
+    image: {
+        height: 300
+    }
+
+
 
     
 

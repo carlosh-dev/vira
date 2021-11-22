@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/core";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Alert, SafeAreaView, Text, TextInput, View } from "react-native";
 import { Button } from "../../components/Button";
 import { Dot } from "../../components/Dot";
@@ -96,7 +96,7 @@ export function NewPattern(){
 			setLoadSaved(true)
 
 			setTimeout(()=> {
-				navigation.navigate('Home');
+				navigation.navigate('Home', {screen: 'Início'});
 			}, 4000)
 			
 
@@ -114,7 +114,6 @@ export function NewPattern(){
 	return (
 		<SafeAreaView style={styles.container}>	
 			<Head title='Criar novo Padrão'/>
-
 			<View style={styles.content}>
 				<View style={styles.form}>
 					<Text style={styles.text}>

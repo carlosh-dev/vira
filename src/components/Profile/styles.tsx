@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
 
     greetings: {
         color: '#fff',
-        fontSize: 30,
+        fontSize: 25,
         fontFamily: theme.fonts.textRegular,
         marginTop: 10,
         marginBottom: -10,
@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
 
     userName: {
         color: '#fff',
-        fontSize: 40,
+        fontSize: 35,
         fontFamily: theme.fonts.textBold,
     },
 

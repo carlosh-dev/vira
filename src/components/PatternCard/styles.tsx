@@ -3,13 +3,27 @@ import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
     container: {
-        
         width: '100%',
-        borderRadius: 15,
+        borderRadius: 20,
         padding: 10,
         marginVertical: 10,
         alignItems: 'center',
         flexDirection: 'row'
+    },
+
+    buttonRemove: {
+        width: 100,
+        height: 105,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginLeft: -10,
+        marginTop: 12,
+        position: 'relative',
+        right: 14,
+        backgroundColor: theme.colors.red,
+        borderRadius: 20,
+        borderWidth: 1,
+        borderColor: '#fff',
     },
     
     patterns: {

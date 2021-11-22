@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginRight: 10,
-        backgroundColor: theme.colors.detail,
+        backgroundColor: theme.colors.secondary,
     },
 
     image: {

@@ -45,13 +45,35 @@ export async function loadPattern(): Promise<any> {
             return {
                 ...patterns[pattern].data
             }
-        })
-
-        console.log(formattedPatterns);
-        
+        })        
 
        return formattedPatterns;
     }catch(error:any){
         throw new Error(error);
     }
 }
+
+
+export async function addPatternSide(pattern: PatternLEDProps): Promise<void> {
+    try{
+        const data =  await AsyncStorage.getItem('@vira:patternsLED');
+        const oldPatterns = data ? (JSON.parse(data) as StoragePatternLED) : {}
+
+        const newPattern = {
+            [pattern.id]: {
+                data: pattern,
+            }
+        }
+
+        await AsyncStorage.setItem('@vira:patternsLED', 
+            JSON.stringify({
+                ...newPattern,
+                ...oldPatterns
+            })
+        )
+    }catch(error:any){
+        throw new Error(error);
+    }
+}
+
+

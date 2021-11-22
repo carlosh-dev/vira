@@ -3,7 +3,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { Welcome } from '../screens/Welcome';
 import { UserNameScreen } from '../screens/UserNameScreen';
 import { CityScreen } from '../screens/CityScreen';
-import { Home } from '../screens/Home';
 import { NewPattern } from '../screens/NewPattern';
 import AuthRoutes from './tab.routes';
 
@@ -37,7 +36,12 @@ const AppRoutes: React.FC = () => (
         <stackRoutes.Screen 
             name="Home"
             component={AuthRoutes} 
-        />        
+        />     
+
+        <stackRoutes.Screen 
+            name="MyPatterns"
+            component={AuthRoutes} 
+        />     
 
         <stackRoutes.Screen 
             name="NewPattern"

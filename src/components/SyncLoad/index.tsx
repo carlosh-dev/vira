@@ -5,7 +5,7 @@ import loadingAnimation from '../../assets/animations/checked-animation.json'
 import styles from './styles';
 
 
-export function SavedLoad() {
+export function SyncLoad() {
     return(
         <View style={styles.container}>
             <View style={styles.container}>
@@ -15,8 +15,8 @@ export function SavedLoad() {
                     loop={false}
                     style={styles.animation}
                 />
-                <Text style={styles.loadText}>Padrão salvo com</Text>
-                <Text style={styles.loadText}>sucesso!</Text>
+                <Text style={styles.loadText}>Seu dispositivo foi</Text>
+                <Text style={styles.loadText}>cincronizado com sucesso!</Text>
                 
             </View>
             

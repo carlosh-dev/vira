@@ -22,25 +22,28 @@ export function Welcome(){
 				Pedale com o VIRA
 			</Text>
 
-			{/* <Image 
+			<Image 
 				source={IllustrationVIRA} 
 				style={styles.image}
 				resizeMode="contain"
-			/> */}
+			/>
 
-			<AnimatedLottieView
+			<Text style={styles.subtitle}>
+				Vira é o seu dispositivo de sinalização{'\n'}
+				para cliclistas no transito. {'\n'}{'\n'}
+				<Text style={styles.bold}>
+					Estamos aqui para te fazer se sentir {'\n'}
+					mais seguro pedalando na cidade. {'\n'}
+				</Text>					
+				
+			</Text>
+
+			{/* <AnimatedLottieView
 				source={animation}
 				autoPlay
 				loop
 				style={styles.animation}
-			/>
-
-			<Text style={styles.subtitle}>
-				Vira é o seu dispositivo de {'\n'}
-				sinalização no transito. {'\n'}
-				Estamos aqui para te fazer se sentir {'\n'}
-				mais seguro pedalando na cidade. {'\n'}
-			</Text>
+			/> */}
 			
 			<Button 
 				title={'Começar'}

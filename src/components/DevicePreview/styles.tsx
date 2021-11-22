@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         marginVertical: 10,
+        width: '100%',
     },
 
     ledContainer: {
@@ -22,8 +23,8 @@ export const styles = StyleSheet.create({
     },
 
     solarPanelContainer: {
-        width: 120,
-        height: 107,
+        width: 100,
+        height: 105,
         paddingHorizontal: 20,
         paddingVertical: 5,
         backgroundColor: theme.colors.primary
@@ -34,6 +35,8 @@ export const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         borderRadius: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     
     patterns: {
@@ -70,5 +73,10 @@ export const styles = StyleSheet.create({
     offLED: {
         backgroundColor: theme.colors.offLED,
     },
+
+    iconView: {
+        borderRadius: 50,
+        backgroundColor: theme.colors.primary,
+    }
     
 })
