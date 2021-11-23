@@ -12,6 +12,7 @@ import { theme } from "../../global/styles/theme";
 import { PatternLEDProps } from "../../libs/storage";
 import { WeatherCard } from "../../components/WeatherCard";
 import { SyncLoad } from "../../components/SyncLoad";
+import { PlanRoutesCard } from "../../components/PlanRoutesCard";
 
 export function Home({navigation}:any) {
 
@@ -116,6 +117,8 @@ export function Home({navigation}:any) {
                 <DevicePreview matrixLeft={matrixLeft} matrixRight={matrixRight} handleSync={handleSync}/>
 
                 <WeatherCard/>
+
+                <PlanRoutesCard/>
                 
                 <TipCard/>
 

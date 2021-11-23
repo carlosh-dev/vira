@@ -16,7 +16,7 @@ export function SyncLoad() {
                     style={styles.animation}
                 />
                 <Text style={styles.loadText}>Seu dispositivo foi</Text>
-                <Text style={styles.loadText}>cincronizado com sucesso!</Text>
+                <Text style={styles.loadText}>sincronizado com sucesso!</Text>
                 
             </View>
             
