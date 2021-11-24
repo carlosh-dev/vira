@@ -18,8 +18,9 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingTop: 10,
         alignItems: 'center',
+        justifyContent: 'center',
     },
-    
+
     texts: {
         width: '100%',
         flexDirection: 'row',
@@ -52,9 +53,9 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: 'rgba(0, 0, 0, 0.6)',
-        padding: 10,  
+        padding: 10,
     },
-    
+
     modalView: {
         margin: 20,
         backgroundColor: theme.colors.primary,
@@ -71,7 +72,7 @@ export const styles = StyleSheet.create({
         shadowRadius: 0,
         elevation: 1
     },
-    
+
     buttonSide: {
         borderRadius: 20,
         padding: 10,
@@ -111,10 +112,10 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: 200,
-        height: 50, 
-        borderRadius: 20, 
+        height: 50,
+        borderRadius: 20,
         backgroundColor: theme.colors.detail,
-        marginTop: 20, 
+        marginTop: 20,
     },
 
     buttonDoneText: {
@@ -122,5 +123,5 @@ export const styles = StyleSheet.create({
         fontFamily: theme.fonts.textMedium
     }
 
-    
+
 })

@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
     },
 
     icon: {
-        
+
     },
 
     textContainer: {
@@ -38,12 +38,12 @@ export const styles = StyleSheet.create({
         fontSize: 25,
         color: theme.colors.white,
         marginBottom: -7
-        
+
     },
 
     text: {
         fontFamily: theme.fonts.textMedium,
-        fontSize: 15,
+        fontSize: 13,
         color: theme.colors.white
     }
 

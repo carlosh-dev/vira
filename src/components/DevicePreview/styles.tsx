@@ -7,14 +7,13 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         marginVertical: 10,
-        width: '100%',
     },
 
     ledContainer: {
         justifyContent: 'center',
         alignItems: 'center',
         height: 110,
-        width: 110,    
+        width: 110,
         padding: 2,
         backgroundColor: theme.colors.primary,
         borderRadius: 7,
@@ -23,7 +22,7 @@ export const styles = StyleSheet.create({
     },
 
     solarPanelContainer: {
-        width: 100,
+        width: 130,
         height: 105,
         paddingHorizontal: 20,
         paddingVertical: 5,
@@ -37,15 +36,15 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    
+
     patterns: {
         height: 100,
-        width: 100,      
+        width: 100,
         borderRadius: 10,
         padding: 5,
         backgroundColor: theme.colors.secondary,
     },
-    
+
     column: {
         flex: 1,
         flexDirection: "column",
@@ -81,5 +80,5 @@ export const styles = StyleSheet.create({
         borderRadius: 50,
         backgroundColor: theme.colors.secondary,
     }
-    
+
 })
